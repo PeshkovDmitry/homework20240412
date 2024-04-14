@@ -6,6 +6,8 @@ import ru.gb.homework20240412.domain.Task;
 import ru.gb.homework20240412.domain.TaskStatus;
 import ru.gb.homework20240412.repository.TaskRepository;
 
+import java.util.List;
+
 /**
  * Сервис, реализующий взаимодействие между контроллером задач и репозиторием
  */
@@ -31,11 +33,41 @@ public class TaskService {
      * @return
      */
 
-    public Iterable<Task> getAll() {
+    public List<Task> getAll() {
         return repository.findAll();
     }
 
-//    public Iterable<Task> getByStatus(TaskStatus status) {
-//
-//    }
+
+    /**
+     * Метод для получения задач с указанным статусом
+     * @param status
+     * @return
+     */
+
+    public List<Task> getByStatus(TaskStatus status) {
+        return repository.findByStatus(status);
+    }
+
+    /**
+     * Метод для обновления статуса задачи
+     * @param id
+     * @param status
+     */
+
+    public Task updateStatus(Long id, TaskStatus status) {
+        repository.updateStatusById(status, id);
+        return repository.findById(id).get();
+    }
+
+    /**
+     * Метод для удаления задачи из репозитория
+     * @param id
+     * @return
+     */
+
+    public void delete(Long id) {
+        repository.deleteById(id);
+    }
+
+
 }
