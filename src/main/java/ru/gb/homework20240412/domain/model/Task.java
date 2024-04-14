@@ -1,4 +1,4 @@
-package ru.gb.homework20240412.domain;
+package ru.gb.homework20240412.domain.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 
 /**
- * Класс, реализующий одну задачу
+ * Класс, имплементирующий одну задачу
  */
 
 @Entity

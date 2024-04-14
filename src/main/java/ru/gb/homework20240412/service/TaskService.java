@@ -2,8 +2,8 @@ package ru.gb.homework20240412.service;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.gb.homework20240412.domain.Task;
-import ru.gb.homework20240412.domain.TaskStatus;
+import ru.gb.homework20240412.domain.model.Task;
+import ru.gb.homework20240412.domain.model.TaskStatus;
 import ru.gb.homework20240412.repository.TaskRepository;
 
 import java.util.List;

@@ -5,10 +5,14 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import ru.gb.homework20240412.domain.Task;
-import ru.gb.homework20240412.domain.TaskStatus;
+import ru.gb.homework20240412.domain.model.Task;
+import ru.gb.homework20240412.domain.model.TaskStatus;
 
 import java.util.List;
+
+/**
+ * Репозиторий для хранения списка задач
+ */
 
 @Repository
 public interface TaskRepository extends JpaRepository<Task, Long>  {

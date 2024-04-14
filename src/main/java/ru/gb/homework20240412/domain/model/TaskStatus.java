@@ -1,4 +1,4 @@
-package ru.gb.homework20240412.domain;
+package ru.gb.homework20240412.domain.model;
 
 /**
  * Энумиратор статусов задачи
